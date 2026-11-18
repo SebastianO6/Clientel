@@ -1,17 +1,13 @@
 import { Footer, Header } from '../components'
 import popePhoto from '../assets/WhatsApp Image 2026-11-17 at 09.18.44.jpeg'
-import communityVisit from '../assets/WhatsApp Image 2026-11-17 at 09.18.43.jpeg'
-import mechanics from "../assets/WhatsApp Image 2026-10-04 at 12.06.55.jpeg"
 import francis from "../assets/WhatsApp Image 2026-11-17 at 09.18.44 (2).jpeg"
 import UpcomingEvents from '../components/UpcomingEvents'
+import ImageGallerySlideshow from '../components/ImageGallerySlideshow'
 
 const policies = [
   { number: '01', title: 'Opportunity for every home', text: 'Backing small businesses, practical skills and dignified work so every family can build a more secure future.', icon: '↗' },
   { number: '02', title: 'Safer, stronger neighbourhoods', text: 'Championing reliable water, better roads, clean public spaces and communities where everyone feels at home.', icon: '⌂' },
   { number: '03', title: 'A voice that gets things done', text: 'Listening first, showing up consistently and turning your priorities into action in Parliament and beyond.', icon: '✳' },
-]
-const photos = [
-  { title: 'Community outreach visit', date: 'October 2026', image: mechanics, alt: 'Pope’s community team meeting local residents' },
 ]
 export default function HomePage() {
  return <><Header/><main>
@@ -23,6 +19,6 @@ export default function HomePage() {
   <section className="story-section section" id="about"><div className="story-image"><img src={francis} alt="Pope meeting with community members"/><div className="image-label">Listening<br/><em>together</em></div></div><div className="story-copy"><p className="eyebrow">Meet Pope</p><h2>A story rooted<br/><em>in community.</em></h2><p>Get to know Francis O. Odhiambo — the person, the experiences that shaped him, and the reasons he is stepping forward to serve Embakasi West.</p><a className="text-link" href="/story">Read Pope’s full story <span>→</span></a></div></section>
   <UpcomingEvents />
   <section className="support-section"><div className="support-intro"><p className="eyebrow">Be part of the movement</p><h2>Every contribution<br/><em>moves us forward.</em></h2><p>Your support helps us reach more neighbours, listen to more ideas and carry this message of hope further. Together, we can do more.</p><a className="button button-light" href="/mpesa">View M-PESA steps <span>→</span></a></div><div className="support-card"><span className="mpesa-logo">M-PESA</span><h3>Choose how you can help</h3><p>Every contribution is appreciated. See the simple step-by-step guide.</p><a className="text-link" href="/mpesa">Continue to M-PESA <span>↗</span></a></div></section>
-  <section className="media-section section" id="media"><div className="section-heading"><p className="eyebrow">News, video & community visits</p><h2>Out there,<br/><em>together.</em></h2></div><div className="media-feature"><div><p className="eyebrow">Watch Pope</p><h3>Messages from the community</h3><p>Watch Pope’s latest video and hear directly from the campaign.</p><a className="text-link" href="https://www.youtube.com/watch?v=g-Ng9JMuM3Y" target="_blank" rel="noreferrer">Open on YouTube <span>↗</span></a></div><div className="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/g-Ng9JMuM3Y" title="Campaign video featuring Pope" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /></div></div><div className="visits-heading"><div><p className="eyebrow">Recent visits</p><h3>People, places, <em>conversations.</em></h3></div><p>Campaign visits and conversations with local residents.</p></div><div className="visit-grid">{photos.map((p)=><article className="visit-card" key={p.title}><img className="visit-photo" src={p.image} alt={p.alt}/><div><small>{p.date}</small><h4>{p.title}</h4></div></article>)}</div></section>
+  <section className="media-section section" id="media"><div className="section-heading"><p className="eyebrow">News, video & community visits</p><h2>Out there,<br/><em>together.</em></h2></div><div className="media-feature"><div><p className="eyebrow">Watch Pope</p><h3>Messages from the community</h3><p>Watch Pope’s latest video and hear directly from the campaign.</p><a className="text-link" href="https://www.youtube.com/watch?v=g-Ng9JMuM3Y" target="_blank" rel="noreferrer">Open on YouTube <span>↗</span></a></div><div className="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/g-Ng9JMuM3Y" title="Campaign video featuring Pope" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /></div></div></section><ImageGallerySlideshow />
  </main><Footer/></>
 }

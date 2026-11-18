@@ -7,7 +7,7 @@ export function Header() {
     <a className="brand" href="/" onClick={closeMenu}><span className="brand-mark">PO</span><span><strong>POPE</strong><small>FRANCIS O. ODHIAMBO</small></span></a>
     <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>{menuOpen ? '×' : '☰'}</button>
     <nav className={menuOpen ? 'nav-open' : ''}>
-      <a href="/story" onClick={closeMenu}>Pope’s story</a><a href="/#agenda" onClick={closeMenu}>The agenda</a><a href="/#events" onClick={closeMenu}>Events</a><a href="/#media" onClick={closeMenu}>Media</a>
+      <a href="/story" onClick={closeMenu}>Pope’s story</a><a href="/#agenda" onClick={closeMenu}>The agenda</a><a href="/#events" onClick={closeMenu}>Events</a><a href="/#media" onClick={closeMenu}>Media</a><a href="/#gallery" onClick={closeMenu}>Gallery</a>
       <a href="/mpesa" className="nav-support" onClick={closeMenu}>Support the journey <span>↗</span></a>
     </nav>
   </header>
@@ -15,7 +15,7 @@ export function Header() {
 
 export function Footer() {
   return <footer><div className="footer-brand"><span className="brand-mark">PO</span><strong>FRANCIS O. ODHIAMBO (POPE)</strong></div><p>MP Embakasi West 2027</p>
-    <div className="footer-links"><a href="/story">Pope’s story</a><a href="/#agenda">Agenda</a><a href="/#events">Events</a><a href="/mpesa">Support</a><a href="/#media">Media</a></div>
+    <div className="footer-links"><a href="/story">Pope’s story</a><a href="/#agenda">Agenda</a><a href="/#events">Events</a><a href="/mpesa">Support</a><a href="/#media">Media</a><a href="/#gallery">Gallery</a></div>
     <small>© 2027 Francis O. Odhiambo (Pope)</small></footer>
 }
 
